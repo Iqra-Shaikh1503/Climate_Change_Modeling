@@ -59,6 +59,9 @@ This project focuses on leveraging Machine Learning (ML) techniques to model, an
 
         pandas, numpy
 
+🙏 Acknowledgements
+
+Special thanks to NASA for their commitment to climate transparency and open public engagement. This project aims to complement their efforts with data science insight.
         scikit-learn, xgboost
 
         matplotlib, seaborn, folium, geopandas
