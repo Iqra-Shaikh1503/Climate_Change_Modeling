@@ -1,69 +1,128 @@
-🌍 Climate Change Modeling
-📌 Project Overview
+# 🌍 Climate Change Sentiment Analysis
 
-This project focuses on leveraging Machine Learning (ML) techniques to model, analyze, and forecast aspects of climate change using public sentiment data and satellite-based environmental metrics. The goal is to build data-driven models that help predict climate indicators like CO₂ emissions, temperature anomalies, and other atmospheric patterns.
-📂 Dataset Description
-1. NASA Climate Change Comments Dataset
+This project focuses on analyzing the **sentiments** (positive, negative, or neutral) in public **Facebook comments** related to climate change. It includes data preprocessing, model training, evaluation, and a simple web app to predict sentiment from new comments.
 
-    Source: NASA Climate Facebook Page
+---
 
-    Type: Textual user comments (2020–2023)
+## 🧠 Project Goals
 
-    Columns:
+- Classify comments into: `Positive`, `Negative`, or `Neutral`
+- Use machine learning models to compare their performance
+- Build and deploy an interactive **Streamlit web app**
+- Save and reuse the best model for real-time predictions
 
-        Date: Timestamp of the comment
+---
 
-        LikesCount: Number of likes the comment received
+## 📁 Project Structure
 
-        ProfileName: Anonymized name (SHA-256 hashed)
+```
+Climate_Change_Modeling/
+│
+├── app.py                          # Streamlit web application
+├── sentiment_model.py             # Model training and evaluation
+├── data/
+│   └── climate_comments.csv       # Cleaned dataset
+├── saved_models/
+│   ├── best_sentiment_model.pkl   # Best performing model
+│   └── tfidf_vectorizer.pkl       # Vectorizer for transforming text
+├── notebooks/
+│   └── EDA_and_Modeling.ipynb     # Exploratory Data Analysis and training
+├── requirements.txt               # Python libraries needed
+└── README.md                      # Project documentation (this file)
+```
 
-        CommentsCount: Number of replies
+---
 
-        Text: Actual comment content
+## 📊 Machine Learning Models Used
 
-    Applications:
+We tested and compared the following models:
 
-        Sentiment Analysis
+| Model                | Accuracy |
+|---------------------|----------|
+| Logistic Regression | 89.77%   |
+| Random Forest       | 86.20%   |
+| XGBoost             | 84.66%   |
+| Naive Bayes         | 84.09%   |
 
-        Topic Modeling
+✅ **Best Model**: Logistic Regression (saved as `.pkl`)
 
-        Engagement Trend Detection
+---
 
-2. Climate Emissions Dataset (climate_nasa.csv)
+## 📌 Features
 
-    Rows: 79,023 (train), 24,353 (test)
+- Text preprocessing (cleaning, tokenization)
+- TF-IDF vectorization
+- Multiple ML models trained
+- Confusion matrix and classification report
+- Interactive app to test your own sentences
 
-    Features: 75+ climate-related variables, including:
+---
 
-        CO₂ Emissions
+## 🚀 How to Run the Project
 
-        Sulphur Dioxide Density
+### ✅ 1. Install Requirements
 
-        Cloud Base Height/Pressure
+```bash
+pip install -r requirements.txt
+```
 
-        Surface Albedo
+### ✅ 2. Run the App
 
-        Aerosol Optical Depth
+```bash
+streamlit run app.py
+```
 
-        Geographic Coordinates (Latitude, Longitude)
+---
 
-        Temporal Data (Year, Week)
+## 🧪 Example Input & Output
 
-🛠️ Tools & Technologies
+**Input:**  
+> *"The weather is very amazing today, there are no clouds and the sky is clear."*
 
-    Languages: Python
+**Output:**  
+> **Predicted Sentiment:** Neutral  
+> **Confidence:** 44.99%  
+>  
+> 🔍 Class Probabilities:  
+> - Negative: 15.74%  
+> - Neutral: 44.99%  
+> - Positive: 39.26%
 
-    IDE: Jupyter Notebook, VS Code
+---
 
-    Libraries:
+## 🔐 .gitignore Setup
 
-        pandas, numpy
+To keep the repo clean, make sure you ignore:
 
-🙏 Acknowledgements
+```
+venv/
+*.pkl
+*.egg-info/
+__pycache__/
+.DS_Store
+```
 
-Special thanks to NASA for their commitment to climate transparency and open public engagement. This project aims to complement their efforts with data science insight.
-        scikit-learn, xgboost
+---
 
-        matplotlib, seaborn, folium, geopandas
+## 👩‍💻 Author
 
-        tqdm, shapely
+**Iqra Shaikh**  
+[GitHub Profile](https://github.com/Iqra-Shaikh1503)
+
+---
+
+## 📌 Future Improvements
+
+- Add LSTM / Transformer models for deep learning
+- Train on larger datasets
+- Deploy with Docker or Hugging Face Spaces
+
+---
+
+## 🙌 Special Thanks
+
+- [Scikit-learn](https://scikit-learn.org/)
+- [XGBoost](https://xgboost.ai/)
+- [Streamlit](https://streamlit.io/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
