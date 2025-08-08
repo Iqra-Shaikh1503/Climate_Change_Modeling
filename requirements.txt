@@ -1,0 +1,15 @@
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+geopandas
+folium
+shapely
+tqdm
+jupyter
+joblib
+pmdarima
+streamlit
+-e .
