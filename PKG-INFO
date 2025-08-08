@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: Climate_Change_Modeling
+Version: 0.0.1
+Summary: A machine learning project for climate change analysis and forecasting
+Author: Iqra Shaikh
+Author-email: shaikhiqar1503@gmail.com
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: geopandas
+Requires-Dist: folium
+Requires-Dist: shapely
+Requires-Dist: tqdm
+Requires-Dist: jupyter
+Requires-Dist: joblib
+Requires-Dist: pmdarima
+Requires-Dist: streamlit
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary
